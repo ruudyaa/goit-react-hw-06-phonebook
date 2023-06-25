@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { toastifyOptions } from 'utils/toastifyOptions';
 
-import { GlobalStyle } from './GlobalStyle';
+import { GlobalStyle } from '../styles/GlobalStyle';
 import { Layout } from './Layout/Layout';
 import { Section } from './Section/Section';
 import { Title } from './Title/Title';
