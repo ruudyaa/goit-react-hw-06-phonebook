@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
+
 import {
   persistStore,
   persistReducer,
@@ -12,6 +13,7 @@ import {
 import storage from 'redux-persist/lib/storage';
 
 import { rootReducer } from './root-reducer';
+
 const persistConfig = {
   key: 'root',
   storage,
