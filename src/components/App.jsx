@@ -13,10 +13,11 @@ import { ContactForm } from './ContactForm/ContactForm';
 import { ContactList } from './ContactList/ContactList';
 
 // redux
-import { getContacts } from 'redux/contacts/contacts-selectors';
+import { getContacts } from 'redux/selectors';
 
-export const App = () => {
+const App = () => {
   const contacts = useSelector(getContacts);
+
   return (
     <Layout>
       <Section title="PhoneBook">
@@ -34,3 +35,5 @@ export const App = () => {
     </Layout>
   );
 };
+
+export default App;
