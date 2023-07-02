@@ -9,8 +9,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { toastifyOptions } from 'utils/toastifyOptions';
 
 // redux
-import { addContact } from 'redux/contacts/contacts-slice';
-import { getContacts } from 'redux/contacts/contacts-selectors';
+import { addContact } from 'redux/contactsSlice';
+import { getFilteredContacts } from 'redux/selectors';
 
 import { BsFillTelephoneFill, BsPersonFill } from 'react-icons/bs';
 import { IoMdPersonAdd } from 'react-icons/io';
@@ -47,7 +47,7 @@ const schema = yup.object().shape({
 const initialValues = { name: '', number: '' };
 
 export const ContactForm = () => {
-  const contacts = useSelector(getContacts);
+  const contacts = useSelector(getFilteredContacts);
   const dispatch = useDispatch();
 
   const isDublicate = ({ name, number }) => {
